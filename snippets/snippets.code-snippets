@@ -1,0 +1,23 @@
+{
+    "World.cfg": {
+        "prefix": "World.cfg",
+        "body": [
+            "World.cfg"
+        ],
+        "description": "World.cfg"
+    },
+    "World.isClient": {
+        "prefix": "World.isClient",
+        "body": [
+            "World.isClient"
+        ],
+        "description": "World.isClient"
+    },
+    "World.CurWorld": {
+        "prefix": "World.CurWorld",
+        "body": [
+            "World.CurWorld"
+        ],
+        "description": "World.CurWorld"
+    }
+}
