@@ -1,11 +1,19 @@
 const fs = require("fs")
 
-let property = fs.readFileSync("./property.txt").toString()
+
 
 let json = {}
-
+let property = fs.readFileSync("./property.txt").toString()
 property.split("\n").forEach(el => {
-    let e = el.replace("\r", "")
+    let e = el.replace("\r", "").trim()
+    json[e] = {}
+    json[e].prefix = e
+    json[e].body = [e]
+    json[e].description = e
+})
+property = fs.readFileSync("./property2.txt").toString()
+property.split("\n").forEach(el => {
+    let e = el.replace("\r", "").trim()
     json[e] = {}
     json[e].prefix = e
     json[e].body = [e]
@@ -50,6 +58,15 @@ json = {
             "end)"
         ],
         "description": "Trigger.addHandler"
+    },
+    "UI:onOpen": {
+        "prefix": "UI:onOpen",
+        "body": [
+            "function self:onOpen(p)",
+            "  print(p)",
+            "end"
+        ],
+        "description": "UI:onOpen"
     }
 }
 
