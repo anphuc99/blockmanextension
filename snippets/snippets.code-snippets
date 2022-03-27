@@ -10674,8 +10674,9 @@
     "Trigger.RegisterHandler": {
         "prefix": "trgRe",
         "body": [
-            "Trigger.RegisterHandler(this:cfg(), \"BLOCK_TRIGGER\", function(context)",
-            "    print(\"Block trigger !\")",
+            "Trigger.RegisterHandler(this:cfg(), \"ENTITY_ENTER\", function(context)",
+            "    local player = context.obj1",
+            "    print(player.name .. \"enter game!\")",
             "end)"
         ],
         "description": "Trigger.RegisterHandler"
@@ -10698,5 +10699,30 @@
             "end"
         ],
         "description": "UI:onOpen"
+    },
+    "luaclass": {
+        "prefix": "luaclass",
+        "body": [
+          "require \"common.class\"",
+          "",
+          "local MyClass = class(\"MyClass\")",
+          "",
+          "function MyClass:ctor()",
+          "    -- contructor",
+          "end",
+          "",
+          "-- set getter",
+          "function MyClass:__index( index )",
+          "    return rawget( MyClass, index )",
+          "end",
+          "",
+          "-- set setter",
+          "function MyClass:__newindex( index, value )",
+          "    rawset(MyClass, index, value )",
+          "end",
+          "",
+          "return MyClass"
+        ],
+        "description": "luaclass"
     }
 }
