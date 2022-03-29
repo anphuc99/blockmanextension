@@ -10700,29 +10700,20 @@
         ],
         "description": "UI:onOpen"
     },
-    "luaclass": {
-        "prefix": "luaclass",
+    "class": {
+        "prefix": "class",
         "body": [
-          "require \"common.class\"",
+          "local Class = require \"script_common.Lib.Class\"",
+          "local MyClass= Class()",
           "",
-          "local MyClass = class(\"MyClass\")",
-          "",
-          "function MyClass:ctor()",
-          "    -- contructor",
-          "end",
-          "",
-          "-- set getter",
-          "function MyClass:__index( index )",
-          "    return rawget( MyClass, index )",
-          "end",
-          "",
-          "-- set setter",
-          "function MyClass:__newindex( index, value )",
-          "    rawset(MyClass, index, value )",
-          "end",
+          "MyClass:create(\"MyClass\",function ()",
+          "    local this = {}",
+          "    -- code here",
+          "    return this",
+          "end)",
           "",
           "return MyClass"
         ],
-        "description": "luaclass"
-    }
+        "description": "class"
+      }
 }
