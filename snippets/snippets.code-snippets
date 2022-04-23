@@ -10715,5 +10715,26 @@
           "return MyClass"
         ],
         "description": "class"
-      }
+    },
+    "CLICK_PART": {
+        "prefix": "CLICK_PART",
+        "body": [
+            "CLICK_PART"
+        ],
+        "description": "CLICK_PART"
+    },
+    "ENTITY_TOUCH_PART_BEGIN": {
+        "prefix": "ENTITY_TOUCH_PART_BEGIN",
+        "body": [
+            "ENTITY_TOUCH_PART_BEGIN"
+        ],
+        "description": "ENTITY_TOUCH_PART_BEGIN"
+    },
+    "ENTITY_TOUCH_PART_END": {
+        "prefix": "ENTITY_TOUCH_PART_END",
+        "body": [
+            "ENTITY_TOUCH_PART_END"
+        ],
+        "description": "ENTITY_TOUCH_PART_END"
+    },
 }

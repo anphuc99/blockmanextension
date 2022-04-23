@@ -806,3 +806,6 @@ Lib.unsubscribeEvent(name, index)
 Lib.emitEvent(name, args)
 Trigger.CheckTriggers(cfg, name, context)
 Trigger.CheckTriggersOnly(cfg, name, context)
+CLICK_PART
+ENTITY_TOUCH_PART_BEGIN
+ENTITY_TOUCH_PART_END
